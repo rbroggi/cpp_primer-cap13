@@ -2,7 +2,7 @@
 // Created by Rodrigo Broggi on 21/11/18.
 //
 
-#include "CopyRefData.h"
+#include "../include/CopyRefData.h"
 std::ostream &operator<<(std::ostream &os, const CopyRefData &data) {
   os << "name: " << data.name << "[" << &data.name << "]" << " num: " << data.num << "[" << &data.num << "]";
   return os;

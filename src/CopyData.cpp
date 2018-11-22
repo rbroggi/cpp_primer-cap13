@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "CopyData.h"
+#include "../include/CopyData.h"
 CopyData::CopyData() {
   std::cout << typeid(*this).name() << "Object with address " << &(*this) << " default constructed" << std::endl;
 }

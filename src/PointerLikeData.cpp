@@ -2,7 +2,7 @@
 // Created by Rodrigo Broggi on 22/11/18.
 //
 #include <iostream>
-#include "PointerLikeData.h"
+#include "../include/PointerLikeData.h"
 PointerLikeData::PointerLikeData(const PointerLikeData &init) : ptr(init.ptr), num(init.num), refs(init.refs) {
   ++*refs;
 }

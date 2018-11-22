@@ -1,12 +1,17 @@
+/**
+ *
+ * \copyright GNU copyright
+ * \mainpage several examples on the cap13 of the cpp primer book - copy control
+ */
 #include <iostream>
 #include <memory>
 #include <vector>
-#include "CopyData.h"
-#include "NonCopyData.h"
-#include "User.h"
-#include "BugClass.h"
-#include "CopyRefData.h"
-#include "PointerLikeData.h"
+#include "../include/CopyData.h"
+#include "../include/NonCopyData.h"
+#include "../include/User.h"
+#include "../include/BugClass.h"
+#include "../include/CopyRefData.h"
+#include "../include/PointerLikeData.h"
 
 void copy_constructor();
 template <typename T>
