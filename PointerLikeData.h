@@ -13,6 +13,10 @@ class PointerLikeData {
   PointerLikeData(const PointerLikeData&);
   ~PointerLikeData();
   PointerLikeData& operator=(const PointerLikeData&);
+  const std::string getPtr() const;
+  int getNum() const;
+  unsigned  int getRefs() const;
+
  private:
   std::string* ptr;
   int num;

@@ -6,6 +6,7 @@
 #include "User.h"
 #include "BugClass.h"
 #include "CopyRefData.h"
+#include "PointerLikeData.h"
 
 void copy_constructor();
 template <typename T>
@@ -59,6 +60,20 @@ int main() {
     std::cout << copyRefData1 << std::endl;
   }
 
+  {
+    PointerLikeData pointerLikeData("Rod", 29);
+    std::cout << "Refs count " << pointerLikeData.getRefs() << std::endl;
+    {
+      PointerLikeData pointerLikeData1(pointerLikeData);
+      std::cout << "Refs count " << pointerLikeData.getRefs() << std::endl;
+      std::cout << "Refs count " << pointerLikeData1.getRefs() << std::endl;
+      PointerLikeData pointerLikeData2 = pointerLikeData;
+      std::cout << "Refs count " << pointerLikeData.getRefs() << std::endl;
+      std::cout << "Refs count " << pointerLikeData1.getRefs() << std::endl;
+      std::cout << "Refs count " << pointerLikeData2.getRefs() << std::endl;
+    }
+    std::cout << "Refs count " << pointerLikeData.getRefs() << std::endl;
+  }
 
   return 0;
 }
